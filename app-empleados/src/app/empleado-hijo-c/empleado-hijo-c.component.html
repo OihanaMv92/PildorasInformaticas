@@ -1,0 +1,35 @@
+<div class="container">
+
+
+
+    {{indice + 1}} {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario}}
+    <!-- CON ESTO CONSEGUIMOS QUE EL TEXTO K FUNCIONA A MODO DE ENLACE CUANDO HAGAMOS CLICK LE PASAMOS A TRAVES DE LA URL ACCION = 1  -->
+    <!-- CON ESTO EL EMPLEADO YA NO ES UN ENLACE -->
+    <button [routerLink]="['/actualiza', indice]" [queryParams]="{accion:'1'}" class=" btn btn-primary">
+
+      Actualiza
+    </button> &nbsp;&nbsp;
+
+    <button [routerLink]="['/actualiza', indice]" [queryParams]="{accion:'2'}" class=" btn btn-danger">
+
+      Elimina
+    </button>
+    <br>
+
+
+    <!-- ------------------------------------------------------------------------ -->
+    <!-- CREAR UN ENLACE PARA CREAR UN VINCULO PARA QUE TE LLEVE A ALGUN SITIO.-->
+    <!-- Pasarle el indice a la url asi sabe el indice que tiene que usar -->
+    <!-- <a [routerLink]="['/actualiza', indice]"> -->
+
+    <!-- {{indice + 1}} {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario}} -->
+    <!-- </a> -->
+
+    <br>
+    <app-caracteristicas-empleado-c (caracteristicasEmpleados)="agregarCaracteristica($event)">
+    </app-caracteristicas-empleado-c>
+    <br>
+    <ul style="list-style: none;">
+        <li *ngFor="let caracteristica of arrayCaracterisitcas">{{ caracteristica }}</li>
+    </ul>
+</div>

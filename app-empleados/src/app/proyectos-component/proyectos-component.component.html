@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <form class="form-group">
+                <div class="form-group col-md-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="cuadroNombre">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="nombre">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)]="cuadroApellido">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="nombre">Cargo</label>
+                    <input type="text" name="cargo" id="cargo" placeholder="Cargo" class="form-control" [(ngModel)]="cuadroCargo">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="nombre">Salario</label>
+                    <input type="number" name="salario" id="salario" placeholder="Salario" class="form-control" [(ngModel)]="cuadroSalario">
+                </div>
+
+            </form>
+
+            <!-- <input type="submit" class="btn btn-primary" style="margin-top: 15px;" (click)="agregarEmpleado()"> -->
+            <button class="btn-dark center" (click)="agregarEmpleado()  ">Agregar</button>
+
+            <button class="btn-dark center " (click)="volverHome() ">Inicio</button>
+
+        </div>
+        <br>
+
+    </div>
+</div>
